@@ -1,1 +1,4 @@
 <app-search (search)="onSearch($event)"></app-search>
+<div *ngFor="let item of searchResults">
+  {{ item.full_name }}
+</div>
