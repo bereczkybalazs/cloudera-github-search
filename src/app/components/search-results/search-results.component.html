@@ -1,4 +1,4 @@
 <app-search (search)="onSearch($event)"></app-search>
-<div *ngFor="let item of searchResults">
-  {{ item.full_name }}
+<div *ngFor="let repository of searchResults">
+  <app-search-result-item [repository]="repository"></app-search-result-item>
 </div>
