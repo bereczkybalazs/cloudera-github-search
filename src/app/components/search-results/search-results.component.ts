@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GithubSearchService} from '../../services/github-search/github-search.service';
-import {GithubSearchResponse} from '../../models/GithubSearchResponse';
+import {SearchResponse} from '../../models/SearchResponse';
 import {Repository} from '../../models/Repository';
 
 @Component({
@@ -17,7 +17,7 @@ export class SearchResultsComponent implements OnInit {
   }
 
   onSearch(query) {
-    this.githubSearchService.searchByQuery(query).subscribe((res: GithubSearchResponse) => {
+    this.githubSearchService.searchByQuery(query).subscribe((res: SearchResponse) => {
       this.searchResults = res.items;
     });
   }
