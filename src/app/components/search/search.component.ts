@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GithubSearchService} from '../../services/github-search/github-search.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   searchQuery: string;
-  constructor() { }
+  constructor(private githubSearchService: GithubSearchService) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,9 @@ export class SearchComponent implements OnInit {
 
   onSearch() {
     console.log(this.searchQuery);
+    this.githubSearchService.searchByQuery(this.searchQuery).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

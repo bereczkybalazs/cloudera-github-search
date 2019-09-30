@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
+import { SearchComponent } from './components/search/search.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
