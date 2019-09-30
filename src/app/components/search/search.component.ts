@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {log} from 'util';
 
 
 @Component({
@@ -8,9 +9,21 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   @Output() search: EventEmitter<string> = new EventEmitter<string>();
+  searchInput: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onInputChange(e) {
+    this.searchInput = e.target.value;
+    if (e.which === 13) {
+      this.submitSearch();
+    }
+  }
+
+  submitSearch() {
+    this.search.emit(this.searchInput);
   }
 }
