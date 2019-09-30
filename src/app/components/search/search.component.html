@@ -1,6 +1,6 @@
 <div class="search-input">
-  <input type="text" class="form-control" (change)="onSearchInputChange($event.target.value)">
-  <button (click)="onSearch()">
+  <input type="text" class="form-control" #searchInput>
+  <button (click)="search.emit(searchInput.value)">
     search
   </button>
 </div>

@@ -12,7 +12,7 @@ export class GithubSearchService {
     this.apiUrl = 'https://api.github.com/search/repositories?q=';
   }
 
-  searchByQuery(query) {
+  searchByQuery(query: string) {
     return this.http.get(this.apiUrl + query);
   }
 }
