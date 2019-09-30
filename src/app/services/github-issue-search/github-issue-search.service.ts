@@ -5,9 +5,9 @@ import {SearchService} from '../search/search.service';
 @Injectable({
   providedIn: 'root'
 })
-export class GithubSearchService extends SearchService {
+export class GithubIssueSearchService extends SearchService {
 
   constructor(protected http: HttpClient) {
-    super(http, 'https://api.github.com/search/repositories?q=');
+    super(http, 'https://api.github.com/search/issues?q=repo:');
   }
 }
