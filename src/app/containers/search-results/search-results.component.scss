@@ -1,0 +1,6 @@
+@import "../../../assets/scss/mixins";
+
+.search-results {
+  @include container;
+  @include content;
+}

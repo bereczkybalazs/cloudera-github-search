@@ -1,0 +1,23 @@
+@import "colors";
+
+$header-background-color: $primary-color;
+
+@mixin header {
+  background: $header-background-color;
+  height: 3rem;
+  width: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+}
+
+
+@mixin container {
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin content {
+  margin-top: 3rem;
+}

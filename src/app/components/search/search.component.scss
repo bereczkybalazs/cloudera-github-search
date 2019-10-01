@@ -1,14 +1,15 @@
-@import "../../../colors";
+@import "../../../assets/scss/mixins";
 
 $search-background-color: $primary-color;
 $search-button-color: $icon-color;
 $search-input-text-color: $icon-color;
 
 .search {
-  background: $search-background-color;
-  height: 3rem;
-  width: 100%;
-  padding: 0;
+  @include header;
+
+  &__container {
+    @include container;
+  }
 
   &__input {
     height: 2rem;
