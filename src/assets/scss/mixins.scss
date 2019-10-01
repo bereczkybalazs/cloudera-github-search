@@ -23,3 +23,27 @@ $header-background-color: $primary-color;
 @mixin content {
   margin-top: 3rem;
 }
+
+@mixin listContainer {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+@mixin listItem {
+  text-decoration: none;
+  color: $primary-text-color;
+  padding: 0.5rem;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem 0 $primary-color;
+  word-break: break-all;
+}
+
+@mixin listItemTitle {
+  color: $primary-color;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+}

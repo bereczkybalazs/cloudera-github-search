@@ -1,0 +1,28 @@
+@import "../../../assets/scss/mixins";
+@import "../../../assets/scss/colors";
+
+$header-text-color: $icon-color;
+
+.issues {
+
+  &__header {
+    @include header;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    color: $header-text-color;
+
+    .header {
+      &__back {
+        width: 2rem;
+        margin-right: 0.5rem;
+        color: $header-text-color;
+      }
+    }
+  }
+  &__items {
+    @include container;
+    @include content;
+    @include listContainer;
+  }
+}

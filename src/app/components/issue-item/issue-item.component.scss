@@ -1,0 +1,8 @@
+@import "../../../assets/scss/mixins";
+
+.issue-item {
+  @include listItem;
+  &__title {
+    @include listItemTitle;
+  }
+}

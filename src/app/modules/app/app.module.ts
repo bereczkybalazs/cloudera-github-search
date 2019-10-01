@@ -7,7 +7,8 @@ import { SearchComponent } from '../../components/search/search.component';
 import { SearchResultsComponent } from '../../containers/search-results/search-results.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchResultItemComponent } from '../../components/search-result-item/search-result-item.component';
-import { RepositoryDetailsComponent } from '../../containers/repository-details/repository-details.component';
+import { IssuesComponent } from '../../containers/issues/issues.component';
+import {IssueItemComponent} from '../../components/issue-item/issue-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RepositoryDetailsComponent } from '../../containers/repository-details/
     SearchComponent,
     SearchResultsComponent,
     SearchResultItemComponent,
-    RepositoryDetailsComponent
+    IssuesComponent,
+    IssueItemComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,5 @@
 .search-results {
   @include container;
   @include content;
-  padding: 1rem;
-  list-style-type: none;
+  @include listContainer;
 }

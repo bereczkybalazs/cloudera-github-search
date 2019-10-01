@@ -6,10 +6,10 @@ import {IssueResponse} from '../../models/IssueResponse';
 
 @Component({
   selector: 'app-repository-details',
-  templateUrl: './repository-details.component.html',
-  styleUrls: ['./repository-details.component.scss']
+  templateUrl: './issues.component.html',
+  styleUrls: ['./issues.component.scss']
 })
-export class RepositoryDetailsComponent implements OnInit {
+export class IssuesComponent implements OnInit {
 
   owner: string;
   project: string;

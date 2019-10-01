@@ -1,16 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RepositoryDetailsComponent } from './repository-details.component';
+import { IssuesComponent } from './issues.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
+import {IssueItemComponent} from '../../components/issue-item/issue-item.component';
 
 describe('RepositoryDetailsComponent', () => {
-  let component: RepositoryDetailsComponent;
-  let fixture: ComponentFixture<RepositoryDetailsComponent>;
+  let component: IssuesComponent;
+  let fixture: ComponentFixture<IssuesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RepositoryDetailsComponent ],
+      declarations: [
+        IssuesComponent,
+        IssueItemComponent
+      ],
       imports: [
         RouterTestingModule,
         HttpClientTestingModule
@@ -20,7 +24,7 @@ describe('RepositoryDetailsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RepositoryDetailsComponent);
+    fixture = TestBed.createComponent(IssuesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
