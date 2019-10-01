@@ -1,0 +1,37 @@
+@import "../../../assets/scss/colors";
+
+$search-result-item-color: $primary-text-color;
+$search-result-item-border-color: $primary-color;
+$full-name-color: $primary-color;
+
+
+.search-result-item {
+  text-decoration: none;
+  color: $search-result-item-color;
+  padding: 0.5rem;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.2rem 0 $search-result-item-border-color;
+
+  &__full-name {
+    color: $full-name-color;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &__counts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .icon {
+      text-align: center;
+      &__logo, &__text {
+        display: block;
+      }
+    }
+  }
+}
