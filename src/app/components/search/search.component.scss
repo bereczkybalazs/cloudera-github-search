@@ -1,0 +1,38 @@
+@import "../../../colors";
+
+$search-background-color: $primary-color;
+$search-button-color: $icon-color;
+$search-input-text-color: $icon-color;
+
+.search {
+  background: $search-background-color;
+  height: 3rem;
+  width: 100%;
+  padding: 0;
+
+  &__input {
+    height: 2rem;
+    border: 0px;
+    color: $search-input-text-color;
+    background: transparent;
+    padding: 0.5rem;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0;
+    left: 0;
+    width: calc(100% - 4rem);
+  }
+  &__button {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: $icon-color;
+    height: 100%;
+    width: 2rem;
+    cursor: pointer;
+    position: absolute;
+  }
+}
