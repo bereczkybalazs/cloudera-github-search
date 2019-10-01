@@ -8,7 +8,18 @@ import {Repository} from '../../models/Repository';
 })
 export class SearchResultItemComponent implements OnInit {
 
-  @Input() repository: Repository;
+  @Input() repository: Repository = {
+    archived: false,
+    description: '',
+    disabled: false,
+    forks_count: 0,
+    html_url: '',
+    id: 0,
+    open_issues_count: 0,
+    stargazers_count: 0,
+    watchers_count: 0,
+    full_name: ''
+  };
 
   constructor() { }
 

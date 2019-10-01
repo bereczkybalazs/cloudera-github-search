@@ -8,6 +8,7 @@ import {SearchService} from '../search/search.service';
 export class GithubSearchService extends SearchService {
 
   constructor(protected http: HttpClient) {
-    super(http, 'https://api.github.com/search/repositories?q=');
+    super(http);
+    this.apiUrl = 'https://api.github.com/search/repositories?q=';
   }
 }
